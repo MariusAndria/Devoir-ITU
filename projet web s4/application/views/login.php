@@ -9,8 +9,11 @@
 
           <div class="col-md-12">
             <form method="post" action="Load/Test_Login">
-              <input type="text" name="email">
-              <input type="text" name="mdp">
+            <label for="email"><b>Username</b></label>
+      <input type="text" placeholder="Username/mail" name="email" required>
+
+      <label for="mdp"><b>Password</b></label>
+      <input type="password" placeholder="Password" name="mdp" required>
               <input type="submit" value="Valider">
             </form>
           </div>
