@@ -26,25 +26,27 @@
             margin-bottom: 12px;
         }
         
-        #myTable {
+        #table {
             border-collapse: collapse;
             width: 100%;
+            height: 10%;
             border: 1px solid #ddd;
             font-size: 18px;
+            overflow-y: scroll;
         }
         
-        #myTable th,
-        #myTable td {
+        #table th,
+        #table td {
             text-align: left;
             padding: 12px;
         }
         
-        #myTable tr {
+        #table tr {
             border-bottom: 1px solid #ddd;
         }
         
-        #myTable tr.header,
-        #myTable tr:hover {
+        #table tr.header,
+        #table tr:hover {
             background-color: #f1f1f1;
         }
     </style>
@@ -90,11 +92,11 @@
                 <thead class="thead-dark">
                     <tr class="header">
                         <th style="width:20%;">CATEGORIE</th>
-                        <th style="width:25%;">NOM DE PRODUITS</th>
-                        <th style="width:20%;">PHOTOS</th>
+                        <th style="width:20%;">NOM DE PRODUITS</th>
+                        <th style="width:15%;">PHOTOS</th>
                         <th style="width:20%;">PRIX UNITAIRE</th>
-                        <th style="width:10%;">QUANTITE</th>
-                        <th style="width:5%;">OK</th>
+                        <th style="width:5%;">QUANTITE</th>
+                        <th style="width:5%;"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -103,15 +105,32 @@
                         <td>Germany</td>
                         <td>Germany</td>
                         <td>Germany</td>
-                        <td>Germany</td>
-                        <td><button type="button" class="btn btn-outline-success">+</button></td>
+                        <td>
+                            <form action="/action_page.php">
+                                <input type="number" id="quantity" name="quantity" min="1" max="5">
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/action_page.php">
+                                <input type="submit" id="add" value="+">
+                            </form>
+                        </td>
                     </tr>
                     <tr>
                         <td>Berglunds snabbkop</td>
-                        <td>Sweden</td>
                         <td>Germany</td>
                         <td>Germany</td>
                         <td>Germany</td>
+                        <td>
+                            <form action="/action_page.php">
+                                <input type="number" id="quantity" name="quantity" min="1" max="5">
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/action_page.php">
+                                <input type="submit" id="add" value="+">
+                            </form>
+                        </td>
                     </tr>
                 </tbody>
             </table>
