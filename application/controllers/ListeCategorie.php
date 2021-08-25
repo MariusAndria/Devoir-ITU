@@ -1,0 +1,49 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class ListeCategorie extends CI_Controller {
+
+	/**
+	 * Index Page for this controller.
+	 *
+	 * Maps to the following URL
+	 * 		http://example.com/index.php/Load
+	 *	- or -
+	 * 		http://example.com/index.php/Load/index
+	 *	- or -
+	 * Since this controller is set as the default controller in
+	 * config/routes.php, it's displayed at http://example.com/
+	 *
+	 * So any other public methods not prefixed with an underscore will
+	 * map to /index.php/Load/<method_name>
+	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 */
+	public function __construct(){
+		parent::__construct();
+	}
+
+	/*public function index(){
+		$this->load->helper('assets');
+		$data['caisse'] = $this->session->userdata('caisse');
+		$data['template'] = 'accueil.php';
+		$this->load->view('template_accueil',$data);
+		
+	}*/
+	public function Choix_Caisse(){
+		$this->load->library('session');
+		$caisse = $this->input->post('caisse');
+		
+		$this->session->set_userdata('sessionCaisse',$caisse); 
+		redirect(site_url('Load/Saisie'));
+	}
+    public function getListeCategorie()
+    {
+        $this->load->library('session');
+        $caisse = $this->input->post('caisse');
+        $this->session->set_userdata('sessionCaisse',$caisse); 
+        $this->load->model('categorie');
+		$data['listeCategorie'] = $this->categorie->getListeCategorie();
+		$this->load->view('listeCategorie',$data);
+
+    }
+}
