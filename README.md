@@ -1,3 +1,0 @@
-# ITU-S4-PROJET-24h
-- ANDRIAMIRADO Marius Fanomezana - ETU1353
-- SAFIDIARIJAONA Tokiniaina - ETU1344
