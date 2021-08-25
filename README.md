@@ -1,2 +1,3 @@
-# Devoir-ITU
-Ato ny Devoir ITU no atao
+# ITU-S4-PROJET-24h
+- ANDRIAMIRADO Marius Fanomezana - ETU1353
+- SAFIDIARIJAONA Tokiniaina - ETU1344
